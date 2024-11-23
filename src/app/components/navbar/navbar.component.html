@@ -1,0 +1,32 @@
+<nav class="navbar">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <span class="brand-icon">⭕</span>
+      VODATASK
+    </a>
+    <button
+      class="navbar-toggler"
+      (click)="toggleNavbar()"
+      aria-label="Toggle navigation"
+      aria-expanded="false"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div
+      class="navbar-collapse"
+      [class.show]="!isNavbarCollapsed"
+      [attr.aria-hidden]="isNavbarCollapsed"
+    >
+      <ul class="navbar-nav">
+        <li *ngFor="let user of users" class="nav-item">
+          <button
+            class="nav-link"
+            (click)="onUserClick(user.id)"
+          >
+            {{ user.username }}
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

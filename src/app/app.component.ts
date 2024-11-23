@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'vodafone-angular-task';
+  selectedUserId!: number;
+
+  onUserSelected(userId: number): void {
+    this.selectedUserId = userId;
+  }
 }

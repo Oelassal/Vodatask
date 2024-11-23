@@ -3,12 +3,20 @@ import { BrowserModule, provideClientHydration, withEventReplay } from '@angular
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { PostsComponent } from './components/posts/posts.component';
+import {HttpClientModule} from '@angular/common/http';
+import { LimitCharPipe } from './components/shared/pipes/limitChar.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavbarComponent,
+    PostsComponent,
+    LimitCharPipe
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule
   ],
