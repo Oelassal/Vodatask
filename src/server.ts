@@ -4,7 +4,6 @@ import express from 'express';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import AppServerModule from './main.server';
-import { render } from '@netlify/angular-runtime/common-engine';
 
 const serverDistFolder = dirname(fileURLToPath(import.meta.url));
 const browserDistFolder = resolve(serverDistFolder, '../browser');
